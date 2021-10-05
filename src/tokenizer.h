@@ -33,6 +33,7 @@ char *copy_str(char *inStr, short len);
 /* Returns a newly allocated zero-terminated vector of freshly allocated
    space-separated tokens from zero-terminated str.
 
+
    For example, tokenize("hello world string") would result in:
      tokens[0] = "hello"
      tokens[1] = "world"
