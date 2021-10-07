@@ -122,33 +122,25 @@ char **tokenize(char* str)
 
 void print_tokens(char **tokens)
 {
-  int i, j;
+  int i;
+  char* current;
   for(i = 0; tokens[i] != NULL; i++)//nested loop to itterate through list of arrays
     {
-      printf("Token at [%d]: ", i);
-      for(j = 0; tokens[i][j] != '\0'; j++)
-	{
-	  printf("%c", tokens[i][j]);
-	}
+      current = get_token(tokens, i);
+      printf("Token at [%d]: %s", i,current);
       printf("\n");
     }
 }
 
 char *get_token(char **tokens, int id){
-  int j;
-  printf("Tokenn at %d is", id);
-  for(j = 0; tokens[id][j] != '\0'; j++)
-    {
-      printf("%s", tokens[id][j]);
-    }
-  printf("\n");
+  return tokens[id];
 }
 
 void free_tokens(char **tokens){
   int i;
   for(i = 0;tokens[i] != NULL; i++){
     free(tokens[i]);
-    }
-  free(tokens);
   }
+  free(tokens);
+}
 
