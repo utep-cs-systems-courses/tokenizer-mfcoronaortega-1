@@ -13,7 +13,7 @@ void main(void){
   char** tokens;
   
   printf("Welcome to my Tokenizer! \n Enter a phrase after '$'.\n Enter 'e' to exit or '!' to see your phrases so far\n");
-
+  
   while(*userInput != 'e')
     {
       printf("$");
